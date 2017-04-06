@@ -41,16 +41,26 @@ public class Employee {
 		}
 	}
 	
-	
+	public String toString()
+	{
+		String ret = "<br> " + title + "</br>" 
+				+ "<br> " + first + "</br>"
+				+ "<br> " + last + "</br>"
+				+ "<br> " + dep + "</br>"
+				+ "<br> " + num + "</br>"
+				+ "<br> " + gender + "</br>";
+		
+		return ret;
+	}
 	public void print()
 	{
 		System.out.println();
-		if(title != null)
+		if(!title.equals(""))
 		{	
 			System.out.print(title);
 		}
 		System.out.print(last + ", " + first + ", " + num + ", " + dep);
-		if(gender != null)
+		if(!gender.equals(""))
 		{
 			System.out.print(", " + gender);
 		}
