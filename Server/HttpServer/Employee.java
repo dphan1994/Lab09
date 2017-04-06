@@ -55,12 +55,12 @@ public class Employee {
 	
 	public String toTable() {
         return "<tr>\n"
-                + "<td>" + title.toString() + "</td>\n"
-                + "<td>" + firstName + "</td>\n"
-                + "<td>" + lastName + "</td>\n"
-                + "<td>" + gender.toString() + "</td>\n"
-                + "<td>" + phone + "</td>\n"
-                + "<td>" + department + "</td>\n"
+                + "<td>" + title + "</td>\n"
+                + "<td>" + first + "</td>\n"
+                + "<td>" + last + "</td>\n"
+                + "<td>" + dep + "</td>\n"
+                + "<td>" + num + "</td>\n"
+                + "<td>" + gender + "</td>\n"
                 + "</tr>";
     }
 	public void print()
