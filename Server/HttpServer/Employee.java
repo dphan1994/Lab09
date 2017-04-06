@@ -4,8 +4,8 @@ public class Employee {
 	String last;
 	String dep;
 	String num;
-	String gender = null;
-	String title = null;
+	String gender = "";
+	String title = "";
 	String[] Genders = {"male","female","other"};
 	String[] Titles = {"Mr.", "Ms.", "Mrs.", "Dr.","Col.","Prof."};
 	public Employee(String vars)
