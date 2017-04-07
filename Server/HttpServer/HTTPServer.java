@@ -38,6 +38,8 @@ public class HTTPServer {
 	static InetSocketAddress name;
 
 	public static void main(String[] args) throws Exception {
+		
+		create_print_html();
 
 		// set up a simple HTTP server on our local host
 		HttpServer server = HttpServer.create(new InetSocketAddress(8000), 0);
@@ -54,6 +56,36 @@ public class HTTPServer {
 		// get it going
 		System.out.println("Starting Server...");
 		server.start();
+	}
+	
+	// a method for filling in the html document and running it
+	// it pulls index.html from the src folder
+	// then writes the html string to it
+	// then it runs the file
+	static void create_print_html(){
+		String url = "src/index.html";
+		String html = "<div><h1>This is lab 9</h1><p>Paragraph on page"
+				+ "</p></div>";
+		File f = new File(url);
+		try {
+			BufferedWriter bw = new BufferedWriter(new FileWriter(f));
+			bw.write(html);
+			bw.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		// run the html file:
+
+		try {
+			Desktop.getDesktop().browse(f.toURI());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
 	}
 
 	//send to HTML!!
